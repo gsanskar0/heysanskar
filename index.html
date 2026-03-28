@@ -23,11 +23,11 @@
             --text-dim: #8a8580;
             --text-muted: #555;
             --border: #222;
-            --gold: #f59e0b;
-            --gold-dim: rgba(245, 158, 11, 0.15);
-            --gold-glow: rgba(245, 158, 11, 0.4);
-            --amber: #d97706;
-            --warm: #fbbf24;
+            --gold: #93c5fd;
+            --gold-dim: rgba(147, 197, 253, 0.12);
+            --gold-glow: rgba(147, 197, 253, 0.35);
+            --amber: #60a5fa;
+            --warm: #bfdbfe;
             --serif: 'Playfair Display', Georgia, serif;
             --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
@@ -79,7 +79,7 @@
 
         .cursor-ring {
             width: 40px; height: 40px;
-            border: 1.5px solid rgba(245, 158, 11, 0.25);
+            border: 1.5px solid rgba(147, 197, 253, 0.25);
             border-radius: 50%;
             position: fixed;
             pointer-events: none;
@@ -173,14 +173,14 @@
 
         .glow-orb-2 {
             width: 400px; height: 400px;
-            background: radial-gradient(circle, rgba(217, 119, 6, 0.08), transparent 70%);
+            background: radial-gradient(circle, rgba(96, 165, 250, 0.08), transparent 70%);
             bottom: -100px; left: -100px;
             animation: glowFloat2 25s ease infinite;
         }
 
         .glow-orb-3 {
             width: 300px; height: 300px;
-            background: radial-gradient(circle, rgba(251, 191, 36, 0.06), transparent 70%);
+            background: radial-gradient(circle, rgba(191, 219, 254, 0.06), transparent 70%);
             top: 50%; left: 40%;
             animation: glowFloat3 18s ease infinite;
         }
@@ -298,7 +298,7 @@
             height: 100%;
             border-radius: 50%;
             padding: 3px;
-            background: linear-gradient(135deg, var(--gold), var(--amber), var(--warm));
+            background: linear-gradient(135deg, #f0ede8, #d4d0ca, #e8e4df);
             animation: photoGlow 4s ease infinite;
             position: relative;
             z-index: 1;
@@ -935,7 +935,7 @@
                     const flicker = Math.sin(time * s.pulse + s.phase) * 0.3 + 0.7;
                     ctx.beginPath();
                     ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-                    ctx.fillStyle = `rgba(245, 194, 66, ${s.alpha * flicker})`;
+                    ctx.fillStyle = `rgba(147, 197, 253, ${s.alpha * flicker})`;
                     ctx.fill();
                 });
                 requestAnimationFrame(draw);
